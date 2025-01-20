@@ -71,7 +71,8 @@ function checkWin() {
   
     if (pat1val!=""&&pat2val!=""&&pat3val!="") {
       if (pat1val===pat2val&&pat2val===pat3val) {
-        diswin.innerText=`winner is ${pat1val}`
+        pat1val==0? diswin.style.color="red":diswin.style.color="green";
+         diswin.innerText=`winner is ${pat1val}`
         msg.classList.remove("hide")
         disable()
         return true
